@@ -40,7 +40,6 @@ function App() {
   useEffect(() => {
     setPending(true);
     async function getBird() {
-      console.log('this is the body', JSON.stringify(searchText));
       const res = await fetch(
         'https://dall-e-bird-images-from-text.p.rapidapi.com/0.5.0',
         {
