@@ -4,7 +4,6 @@ import Input from '../Input';
 import ImageContainer from '../ImageContainer';
 import env from 'react-dotenv';
 import Pending from '../Pending';
-import Button from '../Button';
 import FavouritesPage from '../FavouritesPage';
 
 const addButton = {
@@ -80,14 +79,6 @@ function App() {
           buttonInfo={{ ...addButton, handleClick: addFavourite }}
         />
       )}
-
-      <Button
-        handleClick={() => {
-          window.close();
-        }}
-        buttonClass="exit"
-        buttonText="EXIT"
-      />
 
       <FavouritesPage
         favourites={favourites}
