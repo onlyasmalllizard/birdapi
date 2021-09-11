@@ -37,16 +37,8 @@ function App() {
     ]);
   }
 
-  function togglePending() {
-    setPending(!pending);
-  }
-
-  function updateCurrentBird(newBird) {
-    setCurrentBird({ ...currentBird, ...newBird });
-  }
-
   useEffect(() => {
-    togglePending();
+    setPending(true);
     async function getBird() {
       const res = await fetch(
         'https://dall-e-bird-images-from-text.p.rapidapi.com/0.5.0',
@@ -61,11 +53,11 @@ function App() {
         }
       );
       const data = await res.json();
-      updateCurrentBird({
+      setCurrentBird({
         source: `data:image/gif;base64,${data.result}`,
         alt: searchText,
       });
-      togglePending();
+      setPending(false);
     }
     getBird();
   }, [searchText]);
