@@ -19,7 +19,7 @@ const removeButton = {
 function App() {
   const [currentBird, setCurrentBird] = useState({ source: '', alt: '' });
   const [searchText, setSearchText] = useState('');
-  const [pending, setPending] = useState(true);
+  const [pending, setPending] = useState(false);
   const [favourites, setFavourites] = useState([]);
 
   function triggerApiCall(text) {
@@ -37,8 +37,16 @@ function App() {
     ]);
   }
 
+  function togglePending() {
+    setPending(!pending);
+  }
+
+  function updateCurrentBird(newBird) {
+    setCurrentBird({ ...currentBird, ...newBird });
+  }
+
   useEffect(() => {
-    setPending(true);
+    togglePending();
     async function getBird() {
       const res = await fetch(
         'https://dall-e-bird-images-from-text.p.rapidapi.com/0.5.0',
@@ -53,13 +61,11 @@ function App() {
         }
       );
       const data = await res.json();
-      console.log('response data', data);
-      setCurrentBird({
-        ...currentBird,
+      updateCurrentBird({
         source: `data:image/gif;base64,${data.result}`,
         alt: searchText,
       });
-      setPending(false);
+      togglePending();
     }
     getBird();
   }, [searchText]);
