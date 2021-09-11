@@ -10,13 +10,15 @@ function BirdSearch({
 }) {
   return (
     <section>
-      <Input submit={triggerApiCall} />
+      <Input submit={triggerApiCall} pending={pending} />
       {pending ? (
         <Pending />
       ) : (
         <ImageContainer
           images={[currentBird]}
           buttonInfo={{
+            buttonClass: '',
+            disabled: false,
             ariaLabel: 'Add to favourites',
             buttonText: '❤',
             handleClick: addBirdToFavourites,

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import './input.css';
 
-function Input({ submit, buttonClass }) {
+function Input({ submit, pending }) {
   const [text, setText] = useState('');
 
   function handleChange(e) {
@@ -18,7 +18,16 @@ function Input({ submit, buttonClass }) {
         placeholder="Describe your ideal bird..."
         aria-label="Describe your ideal bird"
       />
-      <Button buttonText="Submit" handleClick={() => submit(text)} />
+      <Button
+        clickData={text}
+        buttonInfo={{
+          buttonClass: '',
+          ariaLabel: '',
+          handleClick: submit,
+          disabled: pending,
+          buttonText: 'Go!',
+        }}
+      />
     </form>
   );
 }
