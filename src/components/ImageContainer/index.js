@@ -8,7 +8,7 @@ function ImageContainer({ images, imageClass, buttonInfo }) {
         <Image
           className={imageClass}
           source={image.source}
-          alt={image.alt}
+          imageDescription={image.description}
           key={uuidv4()}
           id={index}
           buttonInfo={buttonInfo}

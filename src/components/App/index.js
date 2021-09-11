@@ -5,7 +5,10 @@ import env from 'react-dotenv';
 import FavouritesPage from '../FavouritesPage';
 
 function App() {
-  const [currentBird, setCurrentBird] = useState({ source: '', alt: '' });
+  const [currentBird, setCurrentBird] = useState({
+    source: '',
+    description: '',
+  });
   const [searchText, setSearchText] = useState('');
   const [pending, setPending] = useState(false);
   const [favourites, setFavourites] = useState([]);
@@ -43,7 +46,7 @@ function App() {
       const data = await res.json();
       setCurrentBird({
         source: `data:image/gif;base64,${data.result}`,
-        alt: searchText,
+        description: searchText,
       });
       setPending(false);
     }
