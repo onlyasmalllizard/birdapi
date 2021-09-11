@@ -18,11 +18,7 @@ function Input({ submit, buttonClass }) {
         placeholder="Describe your ideal bird..."
         aria-label="Describe your ideal bird"
       />
-      <Button
-        buttonClass={buttonClass}
-        buttonText="Submit"
-        handleClick={() => submit(text)}
-      />
+      <Button buttonText="Submit" handleClick={() => submit(text)} />
     </form>
   );
 }

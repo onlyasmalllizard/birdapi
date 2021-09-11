@@ -184,7 +184,7 @@ window.env = {
   "npm_package_description": "Started as a one-day hackathon with Tommosaurus, I love this API too much to not play with it more.",
   "npm_package_eslintConfig_extends_0": "react-app",
   "npm_package_eslintConfig_extends_1": "react-app/jest",
-  "npm_package_gitHead": "1220f144a475f16aae803cde0e7b3834bf2a41bc",
+  "npm_package_gitHead": "fa6fca1f56b7449ac534ca82957c70580d59ac71",
   "npm_package_name": "hackathons_week-7",
   "npm_package_private": "true",
   "npm_package_readmeFilename": "README.md",

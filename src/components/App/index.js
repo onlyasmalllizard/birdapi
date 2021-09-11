@@ -1,20 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import Input from '../Input';
-import ImageContainer from '../ImageContainer';
+import BirdSearch from '../BirdSearch';
 import env from 'react-dotenv';
-import Pending from '../Pending';
 import FavouritesPage from '../FavouritesPage';
-
-const addButton = {
-  buttonClass: 'add-button',
-  buttonText: 'Add to Favourites',
-};
-
-const removeButton = {
-  buttonClass: 'remove-button',
-  buttonText: 'Remove from Favourites',
-};
 
 function App() {
   const [currentBird, setCurrentBird] = useState({ source: '', alt: '' });
@@ -26,11 +14,11 @@ function App() {
     setSearchText(text);
   }
 
-  function addFavourite() {
+  function addBirdToFavourites() {
     setFavourites([...favourites, currentBird]);
   }
 
-  function removeFavourite(index) {
+  function removeBirdFromFavourites(index) {
     setFavourites([
       ...favourites.slice(0, index),
       ...favourites.slice(index + 1),
@@ -65,21 +53,20 @@ function App() {
   return (
     <main className="App">
       <h1>Build-a-Bird</h1>
-      <Input buttonClass="button" submit={triggerApiCall} />
-
-      {pending ? (
-        <Pending />
-      ) : (
-        <ImageContainer
-          imageClass="bird-image"
-          images={[currentBird]}
-          buttonInfo={{ ...addButton, handleClick: addFavourite }}
-        />
-      )}
+      <BirdSearch
+        triggerApiCall={triggerApiCall}
+        pending={pending}
+        currentBird={currentBird}
+        addBirdToFavourites={addBirdToFavourites}
+      />
 
       <FavouritesPage
         favourites={favourites}
-        buttonInfo={{ ...removeButton, handleClick: removeFavourite }}
+        buttonInfo={{
+          buttonText: '−',
+          ariaLabel: 'Remove from favourites',
+          handleClick: removeBirdFromFavourites,
+        }}
       />
     </main>
   );

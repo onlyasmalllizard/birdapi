@@ -1,8 +1,13 @@
 import './button.css';
 
-function Button({ handleClick, buttonText, buttonClass }) {
+function Button({ handleClick, buttonText, buttonClass, ariaLabel }) {
   return (
-    <button className = {buttonClass} type="button" onClick={handleClick}>
+    <button
+      className={buttonClass}
+      aria-label={ariaLabel}
+      type="button"
+      onClick={handleClick}
+    >
       {buttonText}
     </button>
   );
