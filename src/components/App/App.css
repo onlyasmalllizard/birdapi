@@ -1,0 +1,15 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+h1,
+h2 {
+  font-family: 'Droid Sans', sans-serif;
+  color: hsla(0, 0%, 20%, 1);
+}
+
+

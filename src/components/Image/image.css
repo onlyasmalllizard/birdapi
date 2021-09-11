@@ -1,0 +1,13 @@
+img {
+  width: 30vw;
+  height: auto;
+
+  border: 0.5em solid hsla(0, 0%, 85%, 1);
+  border-radius: 0.75em;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
