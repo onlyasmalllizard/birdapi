@@ -1,6 +1,8 @@
-article {
+.bird-card {
   margin: 1em;
+  padding: 1em 1em 0.5em;
   width: fit-content;
+  border-radius: 0.25em;
 
   background: var(--ghost-white);
   color: var(--rich-black);
@@ -8,10 +10,12 @@ article {
   box-shadow: 0.5em 0.5em 1em var(--rich-black);
 }
 
+.bird-card img {
+  border: 1px solid var(--charcoal);
+}
+
 .image-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 0 1em;
 }

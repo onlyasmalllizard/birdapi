@@ -3,7 +3,7 @@ import Button from '../Button';
 
 function Image({ source, imageDescription, buttonInfo, id }) {
   return (
-    <article>
+    <article className="bird-card">
       <img src={source} alt={imageDescription} />
       <section className="image-info">
         <p>{imageDescription}</p>
