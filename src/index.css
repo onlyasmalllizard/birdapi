@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
 
 :root {
   --rich-black: #0c1821;
@@ -8,6 +8,8 @@
   --languid-lavender: #ccc9dc;
   --almond: #f1dac4;
   --forest-green: #6baa7f;
+  --celadon: #93e5ab;
+  --yellow-green: #a2d729;
 }
 
 html {
@@ -23,7 +25,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: var(--oxford-blue);
   color: var(--ghost-white);
 }

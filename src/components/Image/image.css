@@ -5,8 +5,6 @@ article {
   background: var(--ghost-white);
   color: var(--rich-black);
 
-  font-weight: 500;
-
   box-shadow: 0.5em 0.5em 1em var(--rich-black);
 }
 
