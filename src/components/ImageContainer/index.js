@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 import Image from '../Image';
+import './imageContainer.css';
 
-function ImageContainer({ images, imageClass, buttonInfo }) {
+function ImageContainer({ containerClass, images, imageClass, buttonInfo }) {
   return (
-    <section>
+    <section className={containerClass}>
       {images.map((image, index) => (
         <Image
           className={imageClass}

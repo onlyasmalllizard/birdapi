@@ -15,6 +15,7 @@ function BirdSearch({
         <Pending />
       ) : (
         <ImageContainer
+          containerClass="single"
           images={[currentBird]}
           buttonInfo={{
             buttonClass: '',
