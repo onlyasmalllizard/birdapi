@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../Header';
 import BirdSearch from '../BirdSearch';
 import FavouritesPage from '../FavouritesPage';
+import Questions from '../Questions';
+
+import questions from '../../libs/questions';
 
 function App() {
   const [currentBird, setCurrentBird] = useState({
@@ -60,6 +63,8 @@ function App() {
     <main className="App">
       <Router>
         <Header />
+
+        <Questions questions={questions} />
         <Switch>
           <Route path="/favourites">
             <FavouritesPage
