@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import BirdSearch from '../BirdSearch';
 import env from 'react-dotenv';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Header from '../Header';
+import BirdSearch from '../BirdSearch';
 import FavouritesPage from '../FavouritesPage';
 
 function App() {
@@ -55,22 +58,29 @@ function App() {
 
   return (
     <main className="App">
-      <h1>Build-a-Bird</h1>
-      <BirdSearch
-        triggerApiCall={triggerApiCall}
-        pending={pending}
-        currentBird={currentBird}
-        addBirdToFavourites={addBirdToFavourites}
-      />
-
-      <FavouritesPage
-        favourites={favourites}
-        buttonInfo={{
-          buttonText: '−',
-          ariaLabel: 'Remove from favourites',
-          handleClick: removeBirdFromFavourites,
-        }}
-      />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/favourites">
+            <FavouritesPage
+              favourites={favourites}
+              buttonInfo={{
+                buttonText: '−',
+                ariaLabel: 'Remove from favourites',
+                handleClick: removeBirdFromFavourites,
+              }}
+            />
+          </Route>
+          <Route path="/">
+            <BirdSearch
+              triggerApiCall={triggerApiCall}
+              pending={pending}
+              currentBird={currentBird}
+              addBirdToFavourites={addBirdToFavourites}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </main>
   );
 }
