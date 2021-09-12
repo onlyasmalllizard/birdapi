@@ -1,0 +1,11 @@
+input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+
+  border-radius: 1em;
+  width: 30vw;
+
+  margin: 1.5em 2em;
+  padding: 0.25em 0.5em;
+}
