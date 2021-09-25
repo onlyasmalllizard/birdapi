@@ -1,12 +1,12 @@
 import './image.css';
 import Button from '../Button';
 
-function Image({ source, imageDescription, buttonInfo, id }) {
+function Image({ image, imageClass, buttonInfo, id }) {
   return (
-    <article className="bird-card">
-      <img src={source} alt={imageDescription} />
+    <article className={`bird-card ${imageClass}`}>
+      <img src={image.source} alt={image.description} />
       <section className="image-info">
-        <p>{imageDescription}</p>
+        <p>{image.description}</p>
         <Button buttonInfo={{ ...buttonInfo, id }} />
       </section>
     </article>

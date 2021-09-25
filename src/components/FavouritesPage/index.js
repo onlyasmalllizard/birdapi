@@ -6,7 +6,7 @@ function FavouritesPage({ favourites, buttonInfo }) {
       <h2>Your Favourite Birds</h2>
       <ImageContainer
         images={favourites}
-        imageClass="bird-image"
+        imageClass="favourite-image"
         buttonInfo={buttonInfo}
       />
     </section>
