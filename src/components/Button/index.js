@@ -1,8 +1,13 @@
 import './button.css';
 
 function Button({ clickData, buttonInfo }) {
-  const { buttonClass, ariaLabel, handleClick, disabled, buttonText } =
-    buttonInfo;
+  const {
+    buttonClass,
+    ariaLabel = '',
+    handleClick,
+    disabled,
+    buttonText,
+  } = buttonInfo;
   return (
     <button
       className={buttonClass}

@@ -21,8 +21,7 @@ function Input({ submit, pending }) {
       <Button
         clickData={text}
         buttonInfo={{
-          buttonClass: '',
-          ariaLabel: '',
+          buttonClass: 'get-bird',
           handleClick: submit,
           disabled: pending,
           buttonText: 'Go!',

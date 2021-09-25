@@ -18,7 +18,7 @@ function BirdSearch({
           containerClass="single"
           images={[currentBird]}
           buttonInfo={{
-            buttonClass: '',
+            buttonClass: 'favourites-button',
             disabled: false,
             ariaLabel: 'Add to favourites',
             buttonText: '❤',

@@ -1,0 +1,35 @@
+button {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--ghost-white);
+
+  cursor: pointer;
+
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background: var(--light-grey);
+}
+
+.get-bird {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+
+  color: var(--rich-black);
+
+  padding: 0.35em 1.5em;
+
+  border: none;
+  border-radius: 1em;
+}
+
+.favourites-button {
+  color: var(--red);
+
+  border: 1px solid var(--rich-black);
+  border-radius: 0.25em;
+}
+
+.favourites-button:hover {
+  color: var(--dark-red);
+}

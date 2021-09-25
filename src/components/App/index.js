@@ -70,6 +70,7 @@ function App() {
             <FavouritesPage
               favourites={favourites}
               buttonInfo={{
+                buttonClass: 'favourites-button',
                 buttonText: '−',
                 ariaLabel: 'Remove from favourites',
                 handleClick: removeBirdFromFavourites,
