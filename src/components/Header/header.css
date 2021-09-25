@@ -1,4 +1,6 @@
 header {
+  grid-area: header;
+
   background: var(--rich-black);
   padding: 1em;
 

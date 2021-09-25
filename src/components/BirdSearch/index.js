@@ -1,6 +1,7 @@
 import Input from '../Input';
 import Pending from '../Pending';
 import ImageContainer from '../ImageContainer';
+import './birdSearch.css';
 
 function BirdSearch({
   triggerApiCall,
@@ -9,7 +10,7 @@ function BirdSearch({
   addBirdToFavourites,
 }) {
   return (
-    <section>
+    <section className="bird-search">
       <Input submit={triggerApiCall} pending={pending} />
       {pending ? (
         <Pending />

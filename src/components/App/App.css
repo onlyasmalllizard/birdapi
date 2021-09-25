@@ -1,0 +1,7 @@
+.App {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'sidebar main main main'
+    'sidebar main main main';
+}
